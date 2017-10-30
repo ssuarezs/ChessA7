@@ -1,14 +1,15 @@
-<Completar el readme empleando [markdown](https://guides.github.com/features/mastering-markdown/), de acuerdo a la información de cada proyecto. Modifique el archivo de licencia, de ser necesario. Elimine las instrucciones (texto que aparece entre "<" y ">")>
 
-# Título del proyecto
+# ChessA7
 
 # Integrantes
 
-<Complete la siguiente tabla>
 
+| Nombres | Github nickname |
+|--------|-----------------|
 | Juan Gabriel Barrera | jbarrerab |
 |--------|-----------------|
 | Santiago Suárez Suárez |  ssuarezs |
+
 
 # Introducción
 
@@ -21,7 +22,7 @@
 <Sustento teórico del proyecto. Referencias: artículos, sitios web>
 
 ## Antecedentes
-
+ 
 <Aplicaciones similares, url's de los repos>
 
 # Objetivos
