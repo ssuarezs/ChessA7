@@ -7,7 +7,6 @@
 | Nombres | Github nickname |
 |--------|-----------------|
 | Juan Gabriel Barrera | jbarrerab |
-|--------|-----------------|
 | Santiago Suárez Suárez |  ssuarezs |
 
 
