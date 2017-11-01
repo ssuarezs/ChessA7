@@ -34,7 +34,7 @@ De las aplicaciones más conocidas en el ajedrez tenemos el motor de Stockfish C
 
 ## General
 
-Desarrollo de un programa de ajedrez, que ofrezca un juego interactivo para dos jugadores y la enseñanza sobre la estrategia de aperturas a través d elecciones.
+Desarrollo de un programa de ajedrez, que ofrezca un juego interactivo para dos jugadores y la enseñanza sobre la estrategia de aperturas a través de lecciones.
 
 ## Específicos
 Implementación de la teoría de objetos en programación para:
