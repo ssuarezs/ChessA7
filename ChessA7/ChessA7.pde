@@ -6,6 +6,7 @@ void setup(){
   board1.default_position();
    size(1200,600);
    background(60);
+   bot();
 }
 
 
