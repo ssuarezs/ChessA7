@@ -1,5 +1,6 @@
-BOARD board1;
+import de.looksgood.ani.*;
 
+BOARD board1;
 
 void setup(){
   board1 = new BOARD(); 
@@ -7,6 +8,7 @@ void setup(){
    size(1200,600);
    background(60);
    bot();
+   Ani.init(this);
 }
 
 

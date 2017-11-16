@@ -8,27 +8,27 @@ public abstract class PIECE{
 }
 
 class PAWN extends PIECE{
-  void move (boolean R, int x, int y){
-      if(R && Selection && x == column){
+  void move (  int r,int c,int x,int y){
+      if(  Selection && x == column){
         if(Color){
-          if(row+1 == y){row=y; column=x;}
-          if(row==1 && y==3){row=y; column=x;}
+          if(row+1 == y){board1.change_square(r,c,y,x); row=y; column=x; board1.player=!board1.player;}
+          if(row==1 && y==3){board1.change_square(r,c,y,x); row=y; column=x;board1.player=!board1.player;}
         }else{
-          if(row-1 == y){row=y; column=x;}
-          if(row==6 && y==4){row=y; column=x;}
+          if(row-1 == y){board1.change_square(r,c,y,x); row=y; column=x;board1.player=!board1.player;}
+          if(row==6 && y==4){board1.change_square(r,c,y,x); row=y; column=x;board1.player=!board1.player;}
         }
     }
   }
-  void capture_right (boolean P, boolean R, int x, int y){
-      if(P && R && Selection){
-        if(Color){if(row+1==y && column+1==x){row=y; column=x;}
-        }else{if(row-1==y && column+1==x){row=y; column=x;}}
+  void capture_right (boolean P,     int r,int c,int x,int y){
+      if(P &&   Selection){
+        if(Color){if(row+1==y && column+1==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x;board1.player=!board1.player;}
+        }else{if(row-1==y && column+1==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x;board1.player=!board1.player;}}
     }
   }
-  void capture_left (boolean P, boolean R, int x, int y){
-      if(P && R && Selection){
-        if(Color){if(row+1==y && column-1==x){row=y; column=x;}
-        }else{if(row-1==y && column-1==x){row=y; column=x;}}
+  void capture_left (boolean P,    int r,int c,int x,int y){
+      if(P &&   Selection){
+        if(Color){if(row+1==y && column-1==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x;board1.player=!board1.player;}
+        }else{if(row-1==y && column-1==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x;board1.player=!board1.player;}}
     }
   }
   void paint_piece(){
@@ -38,12 +38,16 @@ class PAWN extends PIECE{
 }
 
 class KNIGHT extends PIECE{
-  void move (boolean R, int x, int y){
-     if(R && Selection){
-      if(row+2==y && column+1==x){row=y; column=x;}    if(row+1==y && column+2==x){row=y; column=x;}
-      if(row-1==y && column+2==x){row=y; column=x;}    if(row-2==y && column+1==x){row=y; column=x;}
-      if(row-2==y && column-1==x){row=y; column=x;}    if(row-1==y && column-2==x){row=y; column=x;}
-      if(row+1==y && column-2==x){row=y; column=x;}    if(row+2==y && column-1==x){row=y; column=x;}
+  void move (   int r,int c,int x,int y){
+     if(  Selection){
+      if(row+2==y && column+1==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
+      if(row+1==y && column+2==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
+      if(row-1==y && column+2==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
+      if(row-2==y && column+1==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
+      if(row-2==y && column-1==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
+      if(row-1==y && column-2==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
+      if(row+1==y && column-2==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
+      if(row+2==y && column-1==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
     }
   }
   void paint_piece(){
@@ -53,28 +57,28 @@ class KNIGHT extends PIECE{
 }
 
 class BISHOP extends PIECE{
-  void move (boolean R, int x, int y){
-     if(R && Selection){
+  void move (    int r,int c,int x,int y){
+     if(  Selection){
         int j=column;
         int i=row;
-        while(i<8 && j<8){
+        while(i<=7 && j<=7){
           i++; j++;
-          if(i==y && j==x){row=y; column=x; i=8;}     
+          if(i==y && j==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; i=8; board1.player=!board1.player;}     
         }
         j=column; i=row;
-        while(i<8 && j>-1){
+        while(i<=7 && j>=0){
           i++; j--;
-          if(i==y && j==x){row=y; column=x; i=8;}    
+          if(i==y && j==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; i=8; board1.player=!board1.player;}    
         }
         j=column; i=row;
-        while(i>-1 && j<8){
+        while(i>=0 && j<=7){
           i--; j++;
-          if(i==y && j==x){row=y; column=x; i=-1;}
+          if(i==y && j==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; i=-1; board1.player=!board1.player;}
         }
         j=column; i=row;
-        while(i>-1 && j>-1){
+        while(i>=0 && j>=0){
           i--; j--;
-          if(i==y && j==x){row=y; column=x; i=-1;}      
+          if(i==y && j==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; i=-1; board1.player=!board1.player;}      
         }
      }
   }
@@ -85,19 +89,20 @@ class BISHOP extends PIECE{
 }
 
 class ROOK extends PIECE{
-  void move (boolean R, int x, int y){
-     if(R && Selection){
-        for(int i=row+1; i<8; i++){
-          if(i==y && column==x){row=y; column=x;}
+  boolean Iposition=true;
+  void move (    int r,int c,int x,int y){
+     if(  Selection){
+        for(int i=row+1; i<=7; i++){
+          if(i==y && column==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;Iposition=false;}
         }
-        for(int i=column+1; i<8; i++){
-          if(i==x && row==y){row=y; column=x;}
+        for(int i=column+1; i<=7; i++){
+          if(i==x && row==y){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;Iposition=false;}
         }
         for(int i=row-1; i>=0; i--){
-          if(i==y && column==x){row=y; column=x;}
+          if(i==y && column==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;Iposition=false;}
         }
         for(int i=column-1; i>=0; i--){
-          if(i==x && row==y){row=y; column=x;}
+          if(i==x && row==y){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;Iposition=false;}
         }
      }
   }
@@ -108,54 +113,57 @@ class ROOK extends PIECE{
 }
 
 class QUEEN extends PIECE{
-  void move (boolean R, int x, int y){
-     if(R && Selection){
+  void move (    int r,int c,int x,int y){
+     if(  Selection){
         int j=column;
         int i=row;
-        while(i<8 && j<8){
+        while(i<=7 && j<=7){
           i++; j++;
-          if(i==y && j==x){row=y; column=x; i=8;}     
+          if(i==y && j==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; i=8; board1.player=!board1.player;}     
         }
         j=column; i=row;
-        while(i<8 && j>-1){
+        while(i<=7 && j>=0){
           i++; j--;
-          if(i==y && j==x){row=y; column=x; i=8;}    
+          if(i==y && j==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; i=8; board1.player=!board1.player;}    
         }
         j=column; i=row;
-        while(i>-1 && j<8){
+        while(i>=0 && j<=7){
           i--; j++;
-          if(i==y && j==x){row=y; column=x; i=-1;}
+          if(i==y && j==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; i=-1; board1.player=!board1.player;}
         }
         j=column; i=row;
-        while(i>-1 && j>-1){
+        while(i>=0 && j>=0){
           i--; j--;
-          if(i==y && j==x){row=y; column=x; i=-1;}      
+          if(i==y && j==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; i=-1; board1.player=!board1.player;}      
         }
-        for(int n=row+1; n<8; n++){
-          if(n==y && column==x){row=y; column=x;}
+         for(int n=row+1; n<=7; n++){
+          if(n==y && column==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
         }
-        for(int n=column+1; n<8; n++){
-          if(n==x && row==y){row=y; column=x;}
+        for(int n=column+1; n<=7; n++){
+          if(n==x && row==y){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
         }
-        for(int n=row-1; n>-1; n--){
-          if(n==y && column==x){row=y; column=x;}
+        for(int n=row-1; n>=0; n--){
+          if(n==y && column==x){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
         }
-        for(int n=column-1; n>-1; n--){
-          if(n==x && row==y){row=y; column=x;}
+        for(int n=column-1; n>=0; n--){
+          if(n==x && row==y){board1.change_square(r,c,y,x); board1.deletePiece();  row=y; column=x; board1.player=!board1.player;}
         }
      }
   }
   void paint_piece(){
     if(Color){w = loadImage("piezasNeo/wq.png");}else{w = loadImage("piezasNeo/bq.png");}
-    if(Active){image(w,(height/10+(column)*height/9.05),(height/20+(7-row)*height/9.05),height/9,height/9);}
+    if(Active){image(w,(height/10+(column)*height/9.05),(height/20+(7-row)*height/9.05),height/9,height/9); board1.player=!board1.player;}
   }
 }
 
 class KING extends PIECE{
-  void move (boolean R, int x, int y){
-     if(R && Selection){
+  boolean Iposition=true;
+  void move (    int r,int c,int x,int y){
+     if(  Selection){
         for(int i=-1;i<2;i++){
-          if(y==row+i && (x==column-1 || x==column+0 || x==column+1) && !(i==0 && x==column)){row=y; column=x;}
+          if(y==row+i && (x==column-1 || x==column+0 || x==column+1) && !(i==0 && x==column)){
+          board1.change_square(r,c,y,x); board1.deletePiece();  
+         row=y; column=x; board1.player=!board1.player; Iposition=false;}
         }
      }
   }

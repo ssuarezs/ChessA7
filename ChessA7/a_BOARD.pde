@@ -3,8 +3,8 @@ public class SQUARES{
   int kind=0; //KIND of PIECE: 0-nothing , 1-pawn , 2-knight , 3-bishop , 4-rook , 5-queen , 6-king
 }
 
-class BOARD{    
-    
+class BOARD{  
+  boolean player;  
   boolean selected_piece;  
   int Irow=8, Icol=8, Frow=8, Fcol=8;
   
@@ -23,6 +23,7 @@ class BOARD{
     
     void default_position(){ //this method declarate each piece and them inicial position, color and other properties
     selected_piece=false; 
+    player=true;
       Kw = new KING(); Kw.column=4; Kw.row=0; Kw.Color=true; Kw.Selection=false; Kw.Active=true;
       Qw = new QUEEN(); Qw.column=3; Qw.row=0; Qw.Color=true; Qw.Selection=false; Qw.Active=true; 
       R1w = new ROOK(); R1w.column=0; R1w.row=0; R1w.Color=true; R1w.Selection=false; R1w.Active=true;  
@@ -93,7 +94,7 @@ class BOARD{
       B1b.paint_piece(); B2b.paint_piece(); N1b.paint_piece(); N2b.paint_piece();
    } 
    
-   boolean Attacked_King(KING X){
+   /*boolean Attacked_King(KING X){
      boolean AK=false;
      int x; if(X.Color){x=1;}else{x=2;} 
          int j=X.column;
@@ -161,7 +162,7 @@ class BOARD{
     if(board[X.row-1][X.column].status!=x && board[X.row-1][X.column].kind==6){AK = true;} 
     if(board[X.row-1][X.column+1].status!=x && board[X.row-1][X.column+1].kind==6){AK = true;} 
      return AK;
-   }
+   }*/
    
    void move_piece(int r, int c, int y, int x){
      boolean avalibleSquare=false;
@@ -186,50 +187,55 @@ class BOARD{
                                 if(x<c && y==r){ while(i-1>x){i--; if(board[j][i].status!=0){avalibleRoad=false;} } j=r; i=c;}
                                 if(y>r && x==c){ while(j+1<y){j++; if(board[j][i].status!=0){avalibleRoad=false;} } j=r; i=c;}
                                 if(y<r && x==c){ while(j-1>y){j--; if(board[j][i].status!=0){avalibleRoad=false;} } j=r; i=c;}    }
-     if(board[r][c].kind==1){ if(board[r][c].status==1 && board[r+1][c+1].status==2 && y==r+1 && x==c+1){pcap_r=true;}
-                              if(board[r][c].status==1 && board[r+1][c-1].status==2 && y==r+1 && x==c-1){pcap_l=true;}
-                              if(board[r][c].status==2 && board[r-1][c+1].status==1 && y==r-1 && x==c+1){pcap_r=true;}
-                              if(board[r][c].status==2 && board[r-1][c-1].status==1 && y==r-1 && x==c-1){pcap_l=true;}
-                              if(board[r][c].status==1 && board[r+1][c].status!=0 ){avalibleRoad=false;}  
-                              if(board[r][c].status==2 && board[r-1][c].status!=0 ){avalibleRoad=false;}
-                              if(board[r][c].status==1 && board[r+2][c].status!=0 && r==1 && y==3){avalibleRoad=false;}
-                              if(board[r][c].status==2 && board[r-2][c].status!=0 && r==6 && y==4){avalibleRoad=false;}  }
+     if(board[r][c].kind==1){ if(c<=6 && board[r][c].status==1 && board[r+1][c+1].status==2 && y==r+1 && x==c+1){pcap_r=true;}
+                              if(c>=1 && board[r][c].status==1 && board[r+1][c-1].status==2 && y==r+1 && x==c-1){pcap_l=true;}
+                              if(c<=6 && board[r][c].status==2 && board[r-1][c+1].status==1 && y==r-1 && x==c+1){pcap_r=true;}
+                              if(c>=1 && board[r][c].status==2 && board[r-1][c-1].status==1 && y==r-1 && x==c-1){pcap_l=true;}
+                              if(!pcap_r && !pcap_l && board[r][c].status==1 && board[r+1][c].status!=0 ){avalibleRoad=false;}  
+                              if(!pcap_r && !pcap_l && board[r][c].status==2 && board[r-1][c].status!=0 ){avalibleRoad=false;}
+                              if(!pcap_r && !pcap_l && board[r][c].status==1 && board[r+2][c].status!=0 && r==1 && y==3){avalibleRoad=false;}
+                              if(!pcap_r && !pcap_l && board[r][c].status==2 && board[r-2][c].status!=0 && r==6 && y==4){avalibleRoad=false;} 
+                              if(!pcap_r && !pcap_l && board[r][c].status==1 && y > r+2 &&  r==1){avalibleRoad=false;}     }
 
      if(board[r][c].status!=0 && board[r][c].status!=board[y][x].status){avalibleSquare=true;}
        
      if(avalibleRoad && avalibleSquare){ 
        
-      board1.deletePiece();     
-      P1.move(avalibleSquare,x,y); P2.move(avalibleSquare,x,y); P3.move(avalibleSquare,x,y); P4.move(avalibleSquare,x,y); 
-      P5.move(avalibleSquare,x,y); P6.move(avalibleSquare,x,y); P7.move(avalibleSquare,x,y); P8.move(avalibleSquare,x,y); 
-      Kw.move(avalibleSquare,x,y); Qw.move(avalibleSquare,x,y); R1w.move(avalibleSquare,x,y); R2w.move(avalibleSquare,x,y); 
-      B1w.move(avalibleSquare,x,y); B2w.move(avalibleSquare,x,y); N1w.move(avalibleSquare,x,y); N2w.move(avalibleSquare,x,y); 
-      P1b.move(avalibleSquare,x,y); P2b.move(avalibleSquare,x,y); P3b.move(avalibleSquare,x,y); P4b.move(avalibleSquare,x,y); 
-      P5b.move(avalibleSquare,x,y); P6b.move(avalibleSquare,x,y); P7b.move(avalibleSquare,x,y); P8b.move(avalibleSquare,x,y);
-      Kb.move(avalibleSquare,x,y); Qb.move(avalibleSquare,x,y); R1b.move(avalibleSquare,x,y); R2b.move(avalibleSquare,x,y); 
-      B1b.move(avalibleSquare,x,y); B2b.move(avalibleSquare,x,y); N1b.move(avalibleSquare,x,y); N2b.move(avalibleSquare,x,y);
-      P1.capture_right(pcap_r,avalibleSquare,x,y);P1.capture_left(pcap_l,avalibleSquare,x,y);
-      P2.capture_right(pcap_r,avalibleSquare,x,y);P2.capture_left(pcap_l,avalibleSquare,x,y);
-      P3.capture_right(pcap_r,avalibleSquare,x,y);P3.capture_left(pcap_l,avalibleSquare,x,y);
-      P4.capture_right(pcap_r,avalibleSquare,x,y);P4.capture_left(pcap_l,avalibleSquare,x,y);
-      P5.capture_right(pcap_r,avalibleSquare,x,y);P5.capture_left(pcap_l,avalibleSquare,x,y);
-      P6.capture_right(pcap_r,avalibleSquare,x,y);P6.capture_left(pcap_l,avalibleSquare,x,y);
-      P7.capture_right(pcap_r,avalibleSquare,x,y);P7.capture_left(pcap_l,avalibleSquare,x,y);
-      P8.capture_right(pcap_r,avalibleSquare,x,y);P8.capture_left(pcap_l,avalibleSquare,x,y);
-      P1b.capture_right(pcap_r,avalibleSquare,x,y);P1b.capture_left(pcap_l,avalibleSquare,x,y);
-      P2b.capture_right(pcap_r,avalibleSquare,x,y);P2b.capture_left(pcap_l,avalibleSquare,x,y);
-      P3b.capture_right(pcap_r,avalibleSquare,x,y);P3b.capture_left(pcap_l,avalibleSquare,x,y);
-      P4b.capture_right(pcap_r,avalibleSquare,x,y);P4b.capture_left(pcap_l,avalibleSquare,x,y);
-      P5b.capture_right(pcap_r,avalibleSquare,x,y);P5b.capture_left(pcap_l,avalibleSquare,x,y);
-      P6b.capture_right(pcap_r,avalibleSquare,x,y);P6b.capture_left(pcap_l,avalibleSquare,x,y);
-      P7b.capture_right(pcap_r,avalibleSquare,x,y);P7b.capture_left(pcap_l,avalibleSquare,x,y);
-      P8b.capture_right(pcap_r,avalibleSquare,x,y);P8b.capture_left(pcap_l,avalibleSquare,x,y);
-      
+       if(player){
+          P1.move( r,c,x,y); P2.move( r,c,x,y); P3.move( r,c,x,y); P4.move( r,c,x,y); 
+          P5.move( r,c,x,y); P6.move( r,c,x,y); P7.move( r,c,x,y); P8.move( r,c,x,y); 
+          Kw.move( r,c,x,y); Qw.move( r,c,x,y); R1w.move( r,c,x,y); R2w.move( r,c,x,y); 
+          B1w.move( r,c,x,y); B2w.move( r,c,x,y); N1w.move( r,c,x,y); N2w.move( r,c,x,y); 
+          P1.capture_right(pcap_r, r,c,x,y);P1.capture_left(pcap_l, r,c,x,y);
+          P2.capture_right(pcap_r, r,c,x,y);P2.capture_left(pcap_l, r,c,x,y);
+          P3.capture_right(pcap_r, r,c,x,y);P3.capture_left(pcap_l, r,c,x,y);
+          P4.capture_right(pcap_r, r,c,x,y);P4.capture_left(pcap_l, r,c,x,y);
+          P5.capture_right(pcap_r, r,c,x,y);P5.capture_left(pcap_l, r,c,x,y);
+          P6.capture_right(pcap_r, r,c,x,y);P6.capture_left(pcap_l, r,c,x,y);
+          P7.capture_right(pcap_r, r,c,x,y);P7.capture_left(pcap_l, r,c,x,y);
+          P8.capture_right(pcap_r, r,c,x,y);P8.capture_left(pcap_l, r,c,x,y);
+       }else{
+          P1b.move( r,c,x,y); P2b.move( r,c,x,y); P3b.move( r,c,x,y); P4b.move( r,c,x,y); 
+          P5b.move( r,c,x,y); P6b.move( r,c,x,y); P7b.move( r,c,x,y); P8b.move( r,c,x,y);
+          Kb.move( r,c,x,y); Qb.move( r,c,x,y); R1b.move( r,c,x,y); R2b.move( r,c,x,y); 
+          B1b.move( r,c,x,y); B2b.move( r,c,x,y); N1b.move( r,c,x,y); N2b.move( r,c,x,y);
+          P1b.capture_right(pcap_r, r,c,x,y);P1b.capture_left(pcap_l, r,c,x,y);
+          P2b.capture_right(pcap_r, r,c,x,y);P2b.capture_left(pcap_l, r,c,x,y);
+          P3b.capture_right(pcap_r, r,c,x,y);P3b.capture_left(pcap_l, r,c,x,y);
+          P4b.capture_right(pcap_r, r,c,x,y);P4b.capture_left(pcap_l, r,c,x,y);
+          P5b.capture_right(pcap_r, r,c,x,y);P5b.capture_left(pcap_l, r,c,x,y);
+          P6b.capture_right(pcap_r, r,c,x,y);P6b.capture_left(pcap_l, r,c,x,y);
+          P7b.capture_right(pcap_r, r,c,x,y);P7b.capture_left(pcap_l, r,c,x,y);
+          P8b.capture_right(pcap_r, r,c,x,y);P8b.capture_left(pcap_l, r,c,x,y);
+       }
+     }
+    }
+    
+    void change_square(int r,int c,int y,int x){ 
        board[y][x].status = board[r][c].status;
        board[y][x].kind = board[r][c].kind;
        board[r][c].status = 0;
-       board[r][c].kind = 0; 
-     }
+       board[r][c].kind = 0;     
     }
     
     void selectPiece(){
@@ -283,10 +289,21 @@ class BOARD{
       if(P5b.row==Frow && P5b.column==Fcol ){ P5b.Active=false;}    if(P6b.row==Frow && P6b.column==Fcol ){ P6b.Active=false;}
       if(P7b.row==Frow && P7b.column==Fcol ){ P7b.Active=false;}    if(P8b.row==Frow && P8b.column==Fcol ){ P8b.Active=false;}
     }
-
-
     
-   
+   void Castle(int y, int x){
+     
+     if(player){
+        if(Kw.Selection && x==6 && y==0 && Kw.Iposition && R2w.Iposition && board[0][6].status==0 && board[0][5].status==0){
+        Kw.column=6; R2w.column=5; Kw.Iposition=false; R2w.Iposition=false; change_square(0,4,0,6); change_square(0,7,0,5); player=!player;} 
+        if(Kw.Selection && x==2 && y==0 && Kw.Iposition && R2w.Iposition && board[0][1].status==0 && board[0][2].status==0 && board[0][3].status==0){
+        Kw.column=2; R1w.column=3; Kw.Iposition=false; R1w.Iposition=false; change_square(0,4,0,2); change_square(0,0,0,3); player=!player;} 
+     }else{
+        if(Kb.Selection && x==6 && y==7 && Kb.Iposition && R2b.Iposition && board[7][6].status==0 && board[7][5].status==0){
+        Kb.column=6; R2b.column=5; Kb.Iposition=false; R2b.Iposition=false; change_square(7,4,7,6); change_square(7,7,7,5); player=!player;} 
+        if(Kb.Selection && x==2 && y==7 && Kb.Iposition && R2b.Iposition && board[7][1].status==0 && board[7][2].status==0 && board[7][3].status==0){
+        Kb.column=2; R1b.column=3; Kb.Iposition=false; R1b.Iposition=false; change_square(7,4,7,2); change_square(7,0,7,3); player=!player;}
+     }       
+   }
    
    
 }
