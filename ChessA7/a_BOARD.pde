@@ -4,11 +4,12 @@ public class SQUARES{
 }
 
 class BOARD{  
+  boolean rotate=true;
   boolean player;  
   boolean selected_piece;  
   int Irow=8, Icol=8, Frow=8, Fcol=8;
   
-  KING Kw;     QUEEN Qw;    ROOK R1w;    ROOK R2w;      //creatation of the 32 pices
+    KING Kw;     QUEEN Qw;    ROOK R1w;    ROOK R2w;      //creatation of the 32 pices
     BISHOP B1w;  BISHOP B2w;  KNIGHT N1w;  KNIGHT N2w;
     PAWN P1; PAWN P2; PAWN P3; PAWN P4; 
     PAWN P5; PAWN P6; PAWN P7; PAWN P8;
@@ -19,7 +20,18 @@ class BOARD{
     PAWN P5b; PAWN P6b; PAWN P7b; PAWN P8b;     
     
     public SQUARES[][] board = new SQUARES[8][8];
-     
+    
+    void c_Display(){
+      P1.Dis(); P2.Dis(); P3.Dis(); P4.Dis(); 
+      P5.Dis(); P6.Dis(); P7.Dis(); P8.Dis(); 
+      Kw.Dis(); Qw.Dis(); R1w.Dis(); R2w.Dis(); 
+      B1w.Dis(); B2w.Dis(); N1w.Dis(); N2w.Dis();
+      P1b.Dis(); P2b.Dis(); P3b.Dis(); P4b.Dis(); 
+      P5b.Dis(); P6b.Dis(); P7b.Dis(); P8b.Dis(); 
+      Kb.Dis(); Qb.Dis(); R1b.Dis(); R2b.Dis(); 
+      B1b.Dis(); B2b.Dis(); N1b.Dis(); N2b.Dis();
+
+    }     
     
     void default_position(){ //this method declarate each piece and them inicial position, color and other properties
     selected_piece=false; 
@@ -81,6 +93,8 @@ class BOARD{
       board[7][2].status=2; board[7][2].kind=3; board[7][3].status=2; board[7][3].kind=5;
       board[7][4].status=2; board[7][4].kind=6; board[7][5].status=2; board[7][5].kind=3;
       board[7][6].status=2; board[7][6].kind=2; board[7][7].status=2; board[7][7].kind=4;
+      
+      c_Display();
     }   
    
     void drawPieces(){ // paint all pieces in them own position
@@ -294,16 +308,29 @@ class BOARD{
      
      if(player){
         if(Kw.Selection && x==6 && y==0 && Kw.Iposition && R2w.Iposition && board[0][6].status==0 && board[0][5].status==0){
-        Kw.column=6; R2w.column=5; Kw.Iposition=false; R2w.Iposition=false; change_square(0,4,0,6); change_square(0,7,0,5); player=!player;} 
+        Kw.column=6; R2w.column=5; Kw.Iposition=false; R2w.Iposition=false; change_square(0,4,0,6); change_square(0,7,0,5); player=!player; R2w.Selection=true;} 
         if(Kw.Selection && x==2 && y==0 && Kw.Iposition && R2w.Iposition && board[0][1].status==0 && board[0][2].status==0 && board[0][3].status==0){
-        Kw.column=2; R1w.column=3; Kw.Iposition=false; R1w.Iposition=false; change_square(0,4,0,2); change_square(0,0,0,3); player=!player;} 
+        Kw.column=2; R1w.column=3; Kw.Iposition=false; R1w.Iposition=false; change_square(0,4,0,2); change_square(0,0,0,3); player=!player; R1w.Selection=true;} 
      }else{
         if(Kb.Selection && x==6 && y==7 && Kb.Iposition && R2b.Iposition && board[7][6].status==0 && board[7][5].status==0){
-        Kb.column=6; R2b.column=5; Kb.Iposition=false; R2b.Iposition=false; change_square(7,4,7,6); change_square(7,7,7,5); player=!player;} 
+        Kb.column=6; R2b.column=5; Kb.Iposition=false; R2b.Iposition=false; change_square(7,4,7,6); change_square(7,7,7,5); player=!player; R2b.Selection=true;} 
         if(Kb.Selection && x==2 && y==7 && Kb.Iposition && R2b.Iposition && board[7][1].status==0 && board[7][2].status==0 && board[7][3].status==0){
-        Kb.column=2; R1b.column=3; Kb.Iposition=false; R1b.Iposition=false; change_square(7,4,7,2); change_square(7,0,7,3); player=!player;}
+        Kb.column=2; R1b.column=3; Kb.Iposition=false; R1b.Iposition=false; change_square(7,4,7,2); change_square(7,0,7,3); player=!player; R1b.Selection=true;}
      }       
    }
+   
+   void Animation(){
+      P1.Anim(); P2.Anim(); P3.Anim(); P4.Anim(); 
+      P5.Anim(); P6.Anim(); P7.Anim(); P8.Anim(); 
+      Kw.Anim(); Qw.Anim(); R1w.Anim(); R2w.Anim(); 
+      B1w.Anim(); B2w.Anim(); N1w.Anim(); N2w.Anim();
+      P1b.Anim(); P2b.Anim(); P3b.Anim(); P4b.Anim(); 
+      P5b.Anim(); P6b.Anim(); P7b.Anim(); P8b.Anim(); 
+      Kb.Anim(); Qb.Anim(); R1b.Anim(); R2b.Anim(); 
+      B1b.Anim(); B2b.Anim(); N1b.Anim(); N2b.Anim();
+
+   }
+   
    
    
 }
