@@ -21,6 +21,21 @@ class BOARD{
     
     public SQUARES[][] board = new SQUARES[8][8];
     
+    void draw_board(){
+        color a=color(240); color b=color(110,150,50);
+        if(Bteam==1){a=color(240);b=color(110,150,50,250);}
+        if(Bteam==2){a=color(227,225,180);b=color(183,142,93,203);}
+        if(Bteam==3){a=color(210,202,233);b=color(100,100,160,180);}
+        if(Bteam==4){a=color(210);b=color(67,138,90,180);}
+        fill(75); rect(height/14,height/150,height/8.5*8,height/8.2*8,10);
+          for(int i=0 ; i<8 ; i++){
+            for(int j=0 ; j<8 ; j++){
+              if((j+i) % 2 == 0){fill(a);}else{fill(b);}
+              noStroke(); rect((height/10+i*height/9.05),(height/50+j*height/9.05),height/9,height/9);
+            }
+          }
+      }
+    
     void c_Display(){
       P1.Dis(); P2.Dis(); P3.Dis(); P4.Dis(); 
       P5.Dis(); P6.Dis(); P7.Dis(); P8.Dis(); 

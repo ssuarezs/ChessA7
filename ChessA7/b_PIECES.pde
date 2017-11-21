@@ -9,17 +9,17 @@ public abstract class PIECE{
   PImage w; //Piece's image
   
   void Dis(){
-    if(board1.rotate){discol=(height/10+(column)*height/9.05); disrow=(height/20+(7-row)*height/9.05);
-                }else{discol=(height/10+(7-column)*height/9.05); disrow=(height/20+(row)*height/9.05);  } 
+    if(board1.rotate){discol=(height/10+(column)*height/9.05); disrow=(height/50+(7-row)*height/9.05);
+                }else{discol=(height/10+(7-column)*height/9.05); disrow=(height/50+(row)*height/9.05);  } 
     }
   void Anim(){
     if(Selection){
       if(board1.rotate){
         Ani.to(this, 0.5, "discol", (height/10+(board1.Fcol)*height/9.05), Ani.EXPO_IN_OUT);
-        Ani.to(this, 0.5, "disrow", (height/20+(7-board1.Frow)*height/9.05), Ani.EXPO_IN_OUT);
+        Ani.to(this, 0.5, "disrow", (height/50+(7-board1.Frow)*height/9.05), Ani.EXPO_IN_OUT);
       }else{
         Ani.to(this, 0.5, "discol", (height/10+(7-board1.Fcol)*height/9.05), Ani.EXPO_IN_OUT);
-        Ani.to(this, 0.5, "disrow", (height/20+(board1.Frow)*height/9.05), Ani.EXPO_IN_OUT);
+        Ani.to(this, 0.5, "disrow", (height/50+(board1.Frow)*height/9.05), Ani.EXPO_IN_OUT);
       }
     }
     }

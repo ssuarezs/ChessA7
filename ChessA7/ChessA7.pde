@@ -7,13 +7,14 @@ void setup(){
   background(60);
   board1 = new BOARD(); 
   board1.default_position();
-   //bot();
-   Ani.init(this);
+  Ani.init(this);
+  bot();
 }
 
 
 void draw(){
-  draw_board();
+  background(60);
+  board1.draw_board();
   draw_sq_sel(board1.Icol,board1.Irow);
-  board1.drawPieces();  
+  board1.drawPieces(); 
 } 
