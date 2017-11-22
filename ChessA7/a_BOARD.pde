@@ -110,6 +110,7 @@ class BOARD{
       board[7][6].status=2; board[7][6].kind=2; board[7][7].status=2; board[7][7].kind=4;
       
       c_Display();
+      Animation();
     }   
    
     void drawPieces(){ // paint all pieces in them own position
@@ -343,7 +344,6 @@ class BOARD{
       P5b.Anim(); P6b.Anim(); P7b.Anim(); P8b.Anim(); 
       Kb.Anim(); Qb.Anim(); R1b.Anim(); R2b.Anim(); 
       B1b.Anim(); B2b.Anim(); N1b.Anim(); N2b.Anim();
-
    }
    
    

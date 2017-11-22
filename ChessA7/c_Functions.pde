@@ -20,7 +20,7 @@ void draw_sq_sel(int x,int  y){
                   }else{
                     if(x<8 && y<8){stroke(70,70,130); rect((height/10+(7-x)*height/9.05),(height/50+y*height/9.05),height/9,height/9,8);noStroke();}
                   }   }
-  if(Bteam==4){  if((x+y)%2==0){fill(67,138,90,250);}else{fill(200);}
+  if(Bteam==4){  if((x+y)%2==0){fill(67,138,90,250);}else{fill(240);}
                   if(board1.rotate){
                     if(x<8 && y<8){noStroke(); rect((height/10+x*height/9.05),(height/50+(7-y)*height/9.05),height/9,height/9,8);}
                   }else{

@@ -7,11 +7,12 @@ Button BoardTeam;
 Button PiecesTeam;
 Button RotBoton;
 ControlP5 Cp5;
-
+ControlP5 B;
 
 
 void bot(){
-   
+  
+  B =new ControlP5(this); 
   Cp5=new ControlP5(this);
   RotBoton=Cp5.addButton("rotBOARD")
   .setPosition(270, 550)
@@ -61,5 +62,5 @@ public void boaTEAM(){
   Bteam++; if(Bteam>4){Bteam=1;}    
 }
 public void pieTEAM(){
-  Pteam++; if(Pteam>4){Pteam=1;}     
+  Pteam++; if(Pteam>5){Pteam=1;}     
 }
