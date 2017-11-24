@@ -124,76 +124,7 @@ class BOARD{
       B1b.paint_piece(); B2b.paint_piece(); N1b.paint_piece(); N2b.paint_piece();
    } 
    
-   /*boolean Attacked_King(KING X){
-     boolean AK=false;
-     int x; if(X.Color){x=1;}else{x=2;} 
-         int j=X.column;
-    for(int i=X.row+1; i<8; i++){
-      j++;  if(board[i][j].status==x){i=8;}else{
-      if(board[i][j].kind==3 || board[i][j].kind==5){AK=true; i=8;}
-      }
-    }
-    for(int i=X.row+1; i<8; i++){
-      j--;  if(board[i][j].status==x){i=8;}else{
-      if(board[i][j].kind==3 || board[i][j].kind==5){AK=true; i=8;}
-      }
-    }
-    for(int i=X.row-1; i>=0; i--){
-      j++;  if(board[i][j].status==x){i=-1;}else{
-      if(board[i][j].kind==3 || board[i][j].kind==5){AK=true; i=-1;}
-      }
-    }
-    for(int i=X.row-1; i>=0; i--){
-      j--;  if(board[i][j].status==x){i=-1;}else{
-      if(board[i][j].kind==3 || board[i][j].kind==5){AK=true; i=-1;}
-      }
-    }
-    for(int i=X.row+1; i<8; i++){
-      if(board[i][X.column].status==x){i=8;}else{
-      if(board[i][X.column].kind==4 || board[i][X.column].kind==5){AK=true; i=8;}
-      }
-    }
-    for(int i=X.column+1; i<8; i++){
-      if(board[X.row][i].status==x){i=8;}else{
-      if(board[X.row][i].kind==4 || board[X.row][i].kind==5){AK=true; i=8;}
-      }
-    }
-    for(int i=X.row-1; i>=0; i--){
-      if(board[i][X.column].status==x){i=-1;}else{
-      if(board[i][X.column].kind==4 || board[i][X.column].kind==5){AK=true; i=-1;}
-      }
-    }
-    for(int i=X.column-1; i>=0; i--){
-      if(board[X.row][i].status==x){i=-1;}else{
-      if(board[X.row][i].kind==4 || board[X.row][i].kind==5){AK=true; i=-1;}
-      }
-    }
-    if(board[X.row+2][X.column-1].status!=x && board[X.row+2][X.column-1].kind==2){AK = true;}  
-    if(board[X.row+2][X.column+1].status!=x && board[X.row+2][X.column+1].kind==2){AK = true;} 
-    if(board[X.row+1][X.column+2].status!=x && board[X.row+1][X.column+2].kind==2){AK = true;} 
-    if(board[X.row-1][X.column+2].status!=x && board[X.row-1][X.column+2].kind==2){AK = true;} 
-    if(board[X.row-2][X.column+1].status!=x && board[X.row-2][X.column+1].kind==2){AK = true;} 
-    if(board[X.row-2][X.column-1].status!=x && board[X.row-2][X.column-1].kind==2){AK = true;} 
-    if(board[X.row-1][X.column-2].status!=x && board[X.row-1][X.column-2].kind==2){AK = true;} 
-    if(board[X.row+1][X.column-2].status!=x && board[X.row+1][X.column-2].kind==2){AK = true;} 
-    if(X.Color){
-      if(board[X.row+1][X.column+1].status!=x && board[X.row+1][X.column+1].kind==1){AK = true;}
-      if(board[X.row+1][X.column-1].status!=x && board[X.row+1][X.column-1].kind==1){AK = true;}
-    }else{
-      if(board[X.row-11][X.column+1].status!=x && board[X.row-1][X.column+1].kind==1){AK = true;}
-      if(board[X.row-11][X.column-1].status!=x && board[X.row-1][X.column-1].kind==1){AK = true;}
-    }
-    if(board[X.row+1][X.column-1].status!=x && board[X.row+1][X.column-1].kind==6){AK = true;}  
-    if(board[X.row+1][X.column].status!=x && board[X.row+1][X.column].kind==6){AK = true;} 
-    if(board[X.row+1][X.column+1].status!=x && board[X.row+1][X.column+1].kind==26){AK = true;} 
-    if(board[X.row][X.column-1].status!=x && board[X.row][X.column-1].kind==6){AK = true;} 
-    if(board[X.row][X.column+1].status!=x && board[X.row][X.column+1].kind==6){AK = true;} 
-    if(board[X.row-1][X.column-1].status!=x && board[X.row-1][X.column-1].kind==6){AK = true;} 
-    if(board[X.row-1][X.column].status!=x && board[X.row-1][X.column].kind==6){AK = true;} 
-    if(board[X.row-1][X.column+1].status!=x && board[X.row-1][X.column+1].kind==6){AK = true;} 
-     return AK;
-   }*/
-   
+      
    void move_piece(int r, int c, int y, int x){
      boolean avalibleSquare=false;
      boolean avalibleRoad=true;
@@ -344,6 +275,49 @@ class BOARD{
       P5b.Anim(); P6b.Anim(); P7b.Anim(); P8b.Anim(); 
       Kb.Anim(); Qb.Anim(); R1b.Anim(); R2b.Anim(); 
       B1b.Anim(); B2b.Anim(); N1b.Anim(); N2b.Anim();
+   }
+   
+   void chang_data(int P, int R, int C, int  A){
+     for(int i = 0 ; i < 8 ; i++ ){
+          for(int j = 0 ; j < 8 ; j++ ){
+            board[i][j].status=0;
+            board[i][j].kind=0;
+          }
+        }
+            if(P==1){ P1.row=R; P1.column=C; if(A==1){P1.Active=true;}else{P1.Active=false;}  board[R][C].status=1; board[R][C].kind=1;}    
+            if(P==2){ P2.row=R; P2.column=C; if(A==1){P2.Active=true;}else{P2.Active=false;}  board[R][C].status=1; board[R][C].kind=1;}  
+            if(P==3){ P3.row=R; P3.column=C; if(A==1){P3.Active=true;}else{P3.Active=false;}  board[R][C].status=1; board[R][C].kind=1;}
+            if(P==4){ P4.row=R; P4.column=C; if(A==1){P4.Active=true;}else{P4.Active=false;}  board[R][C].status=1; board[R][C].kind=1;}    
+            if(P==5){ P5.row=R; P5.column=C; if(A==1){P5.Active=true;}else{P5.Active=false;}  board[R][C].status=1; board[R][C].kind=1;}  
+            if(P==6){ P6.row=R; P6.column=C; if(A==1){P6.Active=true;}else{P6.Active=false;} board[R][C].status=1; board[R][C].kind=1;}
+            if(P==7){ P7.row=R; P7.column=C; if(A==1){P7.Active=true;}else{P7.Active=false;}  board[R][C].status=1; board[R][C].kind=1;}  
+            if(P==8){ P8.row=R; P8.column=C; if(A==1){P8.Active=true;}else{P8.Active=false;}  board[R][C].status=1; board[R][C].kind=1;}            
+            if(P==12){ N1w.row=R; N1w.column=C; if(A==1){N1w.Active=true;}else{N1w.Active=false;}  board[R][C].status=1; board[R][C].kind=2;}    
+            if(P==17){ N2w.row=R; N2w.column=C; if(A==1){N2w.Active=true;}else{N2w.Active=false;}  board[R][C].status=1; board[R][C].kind=2;}
+            if(P==13){ B1w.row=R; B1w.column=C; if(A==1){B1w.Active=true;}else{B1w.Active=false;}  board[R][C].status=1; board[R][C].kind=3;}    
+            if(P==16){ B2w.row=R; B2w.column=C; if(A==1){B2w.Active=true;}else{B2w.Active=false;}  board[R][C].status=1; board[R][C].kind=3;}
+            if(P==11){ R1w.row=R; R1w.column=C; if(A==1){R1w.Active=true;}else{R1w.Active=false;}  board[R][C].status=1; board[R][C].kind=4;}    
+            if(P==18){ R2w.row=R; R2w.column=C; if(A==1){R2w.Active=true;}else{R2w.Active=false;}  board[R][C].status=1; board[R][C].kind=4;}
+            if(P==15){ Kw.row=R; Kw.column=C; if(A==1){Kw.Active=true;}else{Kw.Active=false;}  board[R][C].status=1; board[R][C].kind=6;}    
+            if(P==14){ Qw.row=R; Qw.column=C; if(A==1){Qw.Active=true;}else{Qw.Active=false;}  board[R][C].status=1; board[R][C].kind=5;}
+            
+            if(P==21){ P1b.row=R; P1b.column=C; if(A==1){P1b.Active=true;}else{P1b.Active=false;}  board[R][C].status=2; board[R][C].kind=1;}    
+            if(P==22){ P2b.row=R; P2b.column=C; if(A==1){P2b.Active=true;}else{P2b.Active=false;}  board[R][C].status=2; board[R][C].kind=1;}  
+            if(P==23){ P3b.row=R; P3b.column=C; if(A==1){P3b.Active=true;}else{P3b.Active=false;}  board[R][C].status=2; board[R][C].kind=1;}
+            if(P==24){ P4b.row=R; P4b.column=C; if(A==1){P4b.Active=true;}else{P4b.Active=false;}  board[R][C].status=2; board[R][C].kind=1;}    
+            if(P==25){ P5b.row=R; P5b.column=C; if(A==1){P5b.Active=true;}else{P5b.Active=false;}  board[R][C].status=2; board[R][C].kind=1;}  
+            if(P==26){ P6b.row=R; P6b.column=C; if(A==1){P6b.Active=true;}else{P6b.Active=false;}  board[R][C].status=2; board[R][C].kind=1;}
+            if(P==27){ P7b.row=R; P7b.column=C; if(A==1){P7b.Active=true;}else{P7b.Active=false;}  board[R][C].status=2; board[R][C].kind=1; }  
+            if(P==28){ P8b.row=R; P8b.column=C; if(A==1){P8b.Active=true;}else{P8b.Active=false;}    board[R][C].status=2; board[R][C].kind=1;}            
+            if(P==32){ N1b.row=R; N1b.column=C; if(A==1){N1b.Active=true;}else{N1b.Active=false;}  board[R][C].status=2; board[R][C].kind=2;}    
+            if(P==37){ N2b.row=R; N2b.column=C; if(A==1){N2b.Active=true;}else{N2b.Active=false;}  board[R][C].status=2; board[R][C].kind=2; }
+            if(P==33){ B1b.row=R; B1b.column=C; if(A==1){B1b.Active=true;}else{B1b.Active=false;}  board[R][C].status=2; board[R][C].kind=3;}    
+            if(P==36){ B2b.row=R; B2b.column=C; if(A==1){B2b.Active=true;}else{B2b.Active=false;}  board[R][C].status=2; board[R][C].kind=3;}
+            if(P==31){ R1b.row=R; R1b.column=C; if(A==1){R1b.Active=true;}else{R1b.Active=false;}  board[R][C].status=2; board[R][C].kind=4;}    
+            if(P==38){ R2b.row=R; R2b.column=C; if(A==1){R2b.Active=true;}else{R2b.Active=false;}  board[R][C].status=2; board[R][C].kind=4;}
+            if(P==35){ Kb.row=R; Kb.column=C; if(A==1){Kb.Active=true;}else{Kb.Active=false;}  board[R][C].status=2; board[R][C].kind=6;}    
+            if(P==34){ Qb.row=R; Qb.column=C; if(A==1){Qb.Active=true;}else{Qb.Active=false;}  board[R][C].status=2; board[R][C].kind=5;}
+  
    }
    
    

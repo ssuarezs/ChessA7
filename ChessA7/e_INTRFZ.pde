@@ -86,4 +86,4 @@ class menu extends WINDOW{
 
     public void MultPLAYER(){board1.rotate = !board1.rotate; }
     public void OPE(){board1.rotate = !board1.rotate; }
-    public void HELP(){board1.rotate = !board1.rotate; }
+    public void HELP(){Opens.reading=true; Opens.move++; Opens.load_data(); Opens.reading=false;}
