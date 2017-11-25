@@ -15,11 +15,11 @@ public abstract class PIECE{
   void Anim(){
     if(Selection){
       if(board1.rotate){
-        Ani.to(this, 0.5, "discol", (height/10+(column)*height/9.05), Ani.EXPO_IN_OUT);
-        Ani.to(this, 0.5, "disrow", (height/50+(7-row)*height/9.05), Ani.EXPO_IN_OUT);
+        Ani.to(this, 1, "discol", (height/10+(column)*height/9.05), Ani.EXPO_IN_OUT);
+        Ani.to(this, 1, "disrow", (height/50+(7-row)*height/9.05), Ani.EXPO_IN_OUT);
       }else{
-        Ani.to(this, 0.5, "discol", (height/10+(7-column)*height/9.05), Ani.EXPO_IN_OUT);
-        Ani.to(this, 0.5, "disrow", (height/50+(row)*height/9.05), Ani.EXPO_IN_OUT);
+        Ani.to(this, 1, "discol", (height/10+(7-column)*height/9.05), Ani.EXPO_IN_OUT);
+        Ani.to(this, 1, "disrow", (height/50+(row)*height/9.05), Ani.EXPO_IN_OUT);
       }
     }
     }

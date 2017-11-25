@@ -4,6 +4,7 @@ public class SQUARES{
 }
 
 class BOARD{  
+  boolean playing=false;
   boolean rotate=true;
   boolean player;  
   boolean selected_piece;  
@@ -34,6 +35,14 @@ class BOARD{
               noStroke(); rect((height/10+i*height/9.05),(height/50+j*height/9.05),height/9,height/9);
             }
           }
+         if(playing){
+                 fill(50); rect(210,550,300,30,8);
+                 stroke(30); ellipse(300,565,20,20); ellipse(420,565,20,20); noStroke(); fill(150);
+                 if(player){ellipse(300,565,16,16);}else{ellipse(420,565,16,16);}
+                 fill(250);
+                 textSize(20);
+                 text("  PLAY:      WHITE         BLACK", 210,573);
+             }
       }
     
     void c_Display(){
@@ -280,6 +289,7 @@ class BOARD{
    void chang_data(int P, int R, int C, int  A){
      for(int i = 0 ; i < 8 ; i++ ){
           for(int j = 0 ; j < 8 ; j++ ){
+            board[i][j] = new SQUARES();
             board[i][j].status=0;
             board[i][j].kind=0;
           }
@@ -320,6 +330,63 @@ class BOARD{
   
    }
    
-   
+   void man_pieces(){
+     if(playing){
+       if( selected_piece){
+        if( rotate) {
+            if(mouseX>(height/10)){ Fcol=0;}               if(mouseX>(height/10+height/9.05)){ Fcol=1;}
+            if(mouseX>(height/10+2*height/9.05)){ Fcol=2;} if(mouseX>(height/10+3*height/9.05)){ Fcol=3;}
+            if(mouseX>(height/10+4*height/9.05)){ Fcol=4;} if(mouseX>(height/10+5*height/9.05)){ Fcol=5;}
+            if(mouseX>(height/10+6*height/9.05)){ Fcol=6;} if(mouseX>(height/10+7*height/9.05)){ Fcol=7;}
+            if(mouseY>(height/50)){ Frow=7;}               if(mouseY>(height/50+height/9.05)){ Frow=6;}
+            if(mouseY>(height/50+2*height/9.05)){ Frow=5;} if(mouseY>(height/50+3*height/9.05)){ Frow=4;}
+            if(mouseY>(height/50+4*height/9.05)){ Frow=3;} if(mouseY>(height/50+5*height/9.05)){ Frow=2;}
+            if(mouseY>(height/50+6*height/9.05)){ Frow=1;} if(mouseY>(height/50+7*height/9.05)){ Frow=0;}
+          }else{
+            if(mouseX>(height/10)){ Fcol=7;}               if(mouseX>(height/10+height/9.05)){ Fcol=6;}
+            if(mouseX>(height/10+2*height/9.05)){ Fcol=5;} if(mouseX>(height/10+3*height/9.05)){ Fcol=4;}
+            if(mouseX>(height/10+4*height/9.05)){ Fcol=3;} if(mouseX>(height/10+5*height/9.05)){ Fcol=2;}
+            if(mouseX>(height/10+6*height/9.05)){ Fcol=1;} if(mouseX>(height/10+7*height/9.05)){ Fcol=0;}
+            if(mouseY>(height/50)){ Frow=0;}               if(mouseY>(height/50+height/9.05)){ Frow=1;}
+            if(mouseY>(height/50+2*height/9.05)){ Frow=2;} if(mouseY>(height/50+3*height/9.05)){ Frow=3;}
+            if(mouseY>(height/50+4*height/9.05)){ Frow=4;} if(mouseY>(height/50+5*height/9.05)){ Frow=5;}
+            if(mouseY>(height/50+6*height/9.05)){ Frow=6;} if(mouseY>(height/50+7*height/9.05)){ Frow=7;}
+      }
+         move_piece( Irow, Icol, Frow, Fcol);
+         Castle( Frow, Fcol);
+         deselect();   selected_piece=false;
+         draw_sq_sel( Fcol, Frow);
+         c_Display();
+         Irow=8;   Icol=8;
+         Frow=8;   Icol=8;
+      
+      }else{
+      if( rotate) { 
+        if(mouseX>(height/10)){ Icol=0;}               if(mouseX>(height/10+height/9.05)){ Icol=1;}
+        if(mouseX>(height/10+2*height/9.05)){ Icol=2;} if(mouseX>(height/10+3*height/9.05)){ Icol=3;}
+        if(mouseX>(height/10+4*height/9.05)){ Icol=4;} if(mouseX>(height/10+5*height/9.05)){ Icol=5;}
+        if(mouseX>(height/10+6*height/9.05)){ Icol=6;} if(mouseX>(height/10+7*height/9.05)){ Icol=7;}
+        if(mouseY>(height/50)){ Irow=7;}               if(mouseY>(height/50+height/9.05)){ Irow=6;}
+        if(mouseY>(height/50+2*height/9.05)){ Irow=5;} if(mouseY>(height/50+3*height/9.05)){ Irow=4;}
+        if(mouseY>(height/50+4*height/9.05)){ Irow=3;} if(mouseY>(height/50+5*height/9.05)){ Irow=2;}
+        if(mouseY>(height/50+6*height/9.05)){ Irow=1;} if(mouseY>(height/50+7*height/9.05)){ Irow=0;}
+      }else{
+        if(mouseX>(height/10)){ Icol=7;}               if(mouseX>(height/10+height/9.05)){ Icol=6;}
+        if(mouseX>(height/10+2*height/9.05)){ Icol=5;} if(mouseX>(height/10+3*height/9.05)){ Icol=4;}
+        if(mouseX>(height/10+4*height/9.05)){ Icol=3;} if(mouseX>(height/10+5*height/9.05)){ Icol=2;}
+        if(mouseX>(height/10+6*height/9.05)){ Icol=1;} if(mouseX>(height/10+7*height/9.05)){ Icol=0;}
+        if(mouseY>(height/50)){ Irow=0;}               if(mouseY>(height/50+height/9.05)){ Irow=1;}
+        if(mouseY>(height/50+2*height/9.05)){ Irow=2;} if(mouseY>(height/50+3*height/9.05)){ Irow=3;}
+        if(mouseY>(height/50+4*height/9.05)){ Irow=4;} if(mouseY>(height/50+5*height/9.05)){ Irow=5;}
+        if(mouseY>(height/50+6*height/9.05)){ Irow=6;} if(mouseY>(height/50+7*height/9.05)){ Irow=7;}
+      }
+
+        if(board[Irow][Icol].status!=0){
+         selected_piece=true;
+         selectPiece();}else{Icol=8;Irow=8;}
+      } 
+     } 
+   }
+
    
 }
