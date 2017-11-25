@@ -16,7 +16,7 @@ class SETTINGS extends WINDOW{
       BoardTeam.setColorBackground(color(239,172,20))
       .getCaptionLabel()
       .toUpperCase(false)
-      .setText("BOARD TEAM")
+      .setText("TEMA DEL TABLERO")
       .setColor(color(0));
       
       Cp5.getController("boaTEAM").getCaptionLabel();
@@ -29,7 +29,7 @@ class SETTINGS extends WINDOW{
       PiecesTeam.setColorBackground(color(239,172,20))
       .getCaptionLabel()
       .toUpperCase(false)
-      .setText("PIECES TEAM")
+      .setText("TEMA DE LAS PIEZAS")
       .setColor(color(0));
       
       Cp5.getController("pieTEAM").getCaptionLabel();

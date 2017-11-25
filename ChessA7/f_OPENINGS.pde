@@ -88,7 +88,8 @@ class OPE_W extends WINDOW{
       D2K.setPosition(x+50,y+130); 
       if(view_op){
            next.show(); back.show(); begin.show();
-           fill(240); rect(685,132,430,263,8); 
+           fill(240); rect(685,132,430,263,8);
+           Opens.textE();
        }else{
            next.hide(); back.hide(); begin.hide();}
     

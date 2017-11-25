@@ -8,7 +8,6 @@ abstract class WINDOW{
     PImage K=loadImage("piezas/neow/wk.png");
     PImage P=loadImage("piezas/neow/bp.png");
     String title="Chess-A7";
-    String subtitle;
     int x;
     int y;  
     

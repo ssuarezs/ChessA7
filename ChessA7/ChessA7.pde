@@ -29,4 +29,5 @@ void draw(){
   board1.draw_board();  draw_sq_sel(board1.Icol,board1.Irow);
   board1.drawPieces();  
   CONF.dec(); Opw.dec(); MENU.dec();
+  
 } 

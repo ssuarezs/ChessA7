@@ -28,7 +28,7 @@ void bot(){
   RotBoton.setColorBackground(color(239,172,20))
   .getCaptionLabel()
   .toUpperCase(false)
-  .setText("ROTATE BOARD")
+  .setText("ROTAR TABLERO")
   .setColor(color(0));
   
   Cp5.getController("rotBOARD").getCaptionLabel();
