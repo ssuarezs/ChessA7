@@ -78,18 +78,18 @@ class OPE_W extends WINDOW{
 
 void APERTURA(int n) {
   
-   if(n==0){  Opens.A=1; Opens.Loading();}
-   if(n==1){  Opens.A=2; Opens.Loading();}
-   if(n==2){  Opens.A=3; Opens.Loading();}
+   if(n==0){  Opens.F=1; Opens.Loading();}
+   if(n==1){  Opens.F=2; Opens.Loading();}
+   if(n==2){  Opens.F=3; Opens.Loading();}
     
 }
 
 
 public void next(){
-Opens.reading=true; Opens.move++; Opens.load_data(); Opens.reading=false;
+Opens.reading=true; Opens.move++; Opens.load_data(); Opens.reading=false;println(Opens.move);
 }
 public void back(){
-Opens.reading=true; Opens.move--; Opens.load_data(); Opens.reading=false;
+if(Opens.move>0){Opens.reading=true; Opens.move--; Opens.load_data(); Opens.reading=false;}
 }
 public void begin(){
   board1.default_position();  

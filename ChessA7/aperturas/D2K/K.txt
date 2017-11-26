@@ -1,4 +1,44 @@
-Apertura de los cuatro caballos
--Con estos movimientos tenemos preparada la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica).
--Se desarrolla el alfil blanco por B5 con el objetivo de enrocar.
--Las piezas negras pueden mantener la simetría jugando B4 y aun en las siguientes jugadas con el enroque de ambos y el movimiento sus peones hacia el centro.
+Defensa de los dos caballos
+-La Defensa de los dos caballos tiene lugar tras las jugadas: 1.e4 e5 2.Cf3 Cc6 3.Ab4 Cf6. Esta apertura tiene una caracteristica dinamica de juego, teniendo variantes agresivas o solidas.
+-La Defensa de los dos caballos tiene lugar tras las jugadas: 1.e4 e5 2.Cf3 Cc6 3.Ab4 Cf6. Esta apertura tiene una caracteristica dinamica de juego, teniendo variantes agresivas o solidas.
+-La Defensa de los dos caballos tiene lugar tras las jugadas: 1.e4 e5 2.Cf3 Cc6 3.Ab4 Cf6. Esta apertura tiene una caracteristica dinamica de juego, teniendo variantes agresivas o solidas.
+-La Defensa de los dos caballos tiene lugar tras las jugadas: 1.e4 e5 2.Cf3 Cc6 3.Ab4 Cf6. Esta apertura tiene una caracteristica dinamica de juego, teniendo variantes agresivas o solidas.
+-La Defensa de los dos caballos tiene lugar tras las jugadas: 1.e4 e5 2.Cf3 Cc6 3.Ab4 Cf6. Esta apertura tiene una caracteristica dinamica de juego, teniendo variantes agresivas o solidas.
+-La Defensa de los dos caballos tiene lugar tras las jugadas: 1.e4 e5 2.Cf3 Cc6 3.Ab4 Cf6. A partir de esta posicion se tienen dos variantes principales: 4.Cg5 o 4.d3.
+-4.Cg5, busca iniciativa por parte de las blancas, atacando el peon debil de f7 y amenazando un doble ataque a dama y torre.
+-4..d5, seria la mejor continuacion para las negras que impide el ataque directo y rompe el centro, tratando de obtener igualdad o inciativa. Seguido 5.exd5 es basicamente obligada.
+-4..d5, seria la mejor continuacion para las negras que impide el ataque directo y rompe el centro, tratando de obtener igualdad o inciativa. Seguido 5.exd5 es basicamente obligada.
+-5..Cxd5, es una mala eleccion por parte de las negras, que seria castigada rapidamente.
+-6.Cxf7, realiza un ataque a Dama y torre, obligando al rey a tomar 6..Rxf7. 
+-6.Cxf7, realiza un ataque a Dama y torre, obligando al rey a tomar 6..Rxf7. 
+-6.7.*Df3* La dama entra al ataque y hace precion en el caballo de d5.
+-7.Df3 *Re6* El rey se desplaza para tratar de mantener el centro.
+-Tras las jugadas: 6.Cxf7 Rxf7 7.Df3 Re6 8.Cc3..... Ahora las negras han perdido su enroque, su Rey esta en problemas y las blancas tienen mucha iniciativa.
+-Por esta razon las Negras debe buscar una mejor continuacion, la sugerencia es 6..Ca5.
+-6..Ca5, ataca el alfil. En caso de que el alfil se retirara, las negras tendran el fuerte avance del peon a e4 y el desarrollo de sus alfiles sera rapido y muy comodo. El movimiento del caballo habra tenido sus recompenzas.
+-7.Ab5+, busca mantener iniciativa. 
+-7.Ab5+, c6.
+-7.Ab5+, c6 8.dxc6
+-7.Ab5+, c6 8.dxc6 bxc6 es una continuacion forzada, pero satisfactoria para ambos bandos. Las Blancas ahora tienen una mejor estructura de peones y deben buscar mejorar la posicion de sus piezas, llevar el ataque al centro y buscar un buen final. La estructura de peones de las negras es regular, pero podran desarrollarse mucho mejor y todavia tiene el fuerte avance e4.
+-Pasaremos ahora a ver la variante principal 4.d3.
+-4.d3, protege el peon de e4 y mantiene una solida posicion.
+-Una buena continuacion para las negras, 4..Ae7, una jugada solida y concreta que busca un rapido enroque. 
+-5.0-0
+-5.0-0 0-0. A partir de ahora se tomara como ejemplo la partida de *Magnus Carlsen y Xiang Bu* de la copa del mundo del 2017, a partir de esta se enunciaran las estrategias basicas para cada bando. 
+-La posicion es muy solida y se debe buscar la iniciativa. A partir de esta posicion, las blancas buscaran desarollar el resto de sus piezas hacia el flaco de rey para atacar. Las negras buscaran un desarrollo rapido y la fuerte ruptura en d5.
+-La posicion es muy solida y se debe buscar la iniciativa. A partir de esta posicion, las blancas buscaran desarollar el resto de sus piezas hacia el flaco de rey para atacar. Las negras buscaran un desarrollo rapido y la fuerte ruptura en d5.
+-La posicion es muy solida y se debe buscar la iniciativa. A partir de esta posicion, las blancas buscaran desarollar el resto de sus piezas hacia el flaco de rey para atacar. Las negras buscaran un desarrollo rapido y la fuerte ruptura en d5.
+-7..Ae6, pantea un cambio de alfiles que busca ciertos beneficios
+-En caso de que el blanco cambiara los alfiles, se retomaria con el peon de f.
+-En caso de que el blanco cambiara los alfiles, se retomaria con el peon de f. Y ahora las negras tendiran un comodo juego, donde su nuevo peon en e6 controla casillas importantes como d5 o f5, y su caballo de f6 podra tomar una provechosa excurcion hacia la casilla f4(via h5-f4).
+-Por ello seria mejor buscar el desarrollo por parte de las blancas. 
+-Parea las negras, cambiar el alfil ahora mismo tampoco seria un buen negocio, debido a que se pued tomar retomar conn el peon de a y la torre tendria una excelente columna.
+-Con la Dama en d7, las negras terminan su desarrollo y podran buscar la ruptura del centro jugando d5 y seguido centralizaran sus torres poniendolas en las casillas d8 y e8. Asi tendran un juego muy activo y mucho potencial.
+-Las blancas no tienen porque apresurarse, tienen el tiempo para desarrollar todas sus piezas y pasar al ataque en el flanco de rey. Aun asi, tendran que ser cuidadosas con la ruptura en d5.  
+---------------FIN DE LA LECCION---------------
+
+
+
+
+
+ 

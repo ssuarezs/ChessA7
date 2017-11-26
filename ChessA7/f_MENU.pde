@@ -98,6 +98,7 @@ class menu extends WINDOW{
     public void OPE(){
         MENU.A(); MENU.active=!MENU.active; 
         Opw.A(); Opw.active=!CONF.active; 
+        board1.playing=false;
       }
     
     public void HELP(){CONF.A(); CONF.active=!CONF.active;}

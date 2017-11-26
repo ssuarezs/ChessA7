@@ -1,6 +1,6 @@
 
 class Opening{
-      int A;
+      int F;
       boolean reading=false;
       int move=0;
       String rut="aperturas/";
@@ -26,9 +26,9 @@ class Opening{
    }}
    
    void OP(){
-       if(A==1){rut="aperturas/4caballos/";}
-       if(A==2){rut="aperturas/Italiana/";}
-       if(A==3){rut="aperturas/D2K/";}
+       if(F==1){rut="aperturas/4caballos/";}
+       if(F==2){rut="aperturas/Italiana/";}
+       if(F==3){rut="aperturas/D2K/";}
        move = 0; 
    
    }
@@ -38,12 +38,12 @@ class Opening{
         fill(60); textSize(20);
         text(text_explain[0],700,168);
         textSize(15);
-        if(move>0 && move<text_explain.length){text(text_explain[move],700,190,400,300);}      
+        if(move>0 && move<text_explain.length){text(text_explain[move],700,190,400,300);}
+        text(move,1040,168);
    
    }
    
    void Loading(){
-                if(rut=="aperturas/D2K/"){
-                    reading=true; load_data(); reading=false;
-                }else{OP(); reading=true; load_data(); reading=false;}  }
+                OP(); reading=true; load_data(); reading=false;
+    }
    }
