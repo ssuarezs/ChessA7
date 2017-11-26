@@ -1,8 +1,9 @@
 
 class Opening{
+      int A;
       boolean reading=false;
       int move=0;
-      String rut;
+      String rut="aperturas/";
       Table table;
       String[] text_explain;
       
@@ -24,21 +25,25 @@ class Opening{
         reading = false;
    }}
    
-   void OP(int a){
-       if(a==1){rut="aperturas/4caballos/";}
-       if(a==2){rut="aperturas/Italiana/";}
-       if(a==3){rut="aperturas/D2K/";}
+   void OP(){
+       if(A==1){rut="aperturas/4caballos/";}
+       if(A==2){rut="aperturas/Italiana/";}
+       if(A==3){rut="aperturas/D2K/";}
        move = 0; 
    
    }
     
    void textE(){ 
         text_explain = loadStrings(rut+"K.txt");
-        fill(30); textSize(20);
-        text(text_explain[0],700,160);
+        fill(60); textSize(20);
+        text(text_explain[0],700,168);
         textSize(15);
-        if(move>0 && move<text_explain.length){text(text_explain[move],700,190,400,300);}
-        
+        if(move>0 && move<text_explain.length){text(text_explain[move],700,190,400,300);}      
    
    }
-}
+   
+   void Loading(){
+                if(rut=="aperturas/D2K/"){
+                    reading=true; load_data(); reading=false;
+                }else{OP(); reading=true; load_data(); reading=false;}  }
+   }

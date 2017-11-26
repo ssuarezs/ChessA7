@@ -1,5 +1,3 @@
-import controlP5.*;
-
 
 Button Main;
 Button RotBoton;
@@ -39,10 +37,6 @@ void bot(){
 
 
 public void MAIN(){
-  FourK.show();
-  Italian.show();
-  D2K.show();
-  Opw.view_op=false;
   if(!MENU.active){ MENU.A();} MENU.active=true;
      CONF.active=true; CONF.A(); CONF.active=false;
      Opw.active=true; Opw.A(); Opw.active=false;

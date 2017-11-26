@@ -1,0 +1,4 @@
+Apertura de los cuatro caballos
+-Con estos movimientos tenemos preparada la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica).
+-Se desarrolla el alfil blanco por B5 con el objetivo de enrocar.
+-Las piezas negras pueden mantener la simetría jugando B4 y aun en las siguientes jugadas con el enroque de ambos y el movimiento sus peones hacia el centro.
