@@ -1,4 +1,12 @@
 Apertura de los cuatro caballos
--Con estos movimientos tenemos preparada la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica).
--Se desarrolla el alfil blanco por B5 con el objetivo de enrocar.
--Las piezas negras pueden mantener la simetría jugando B4 y aun en las siguientes jugadas con el enroque de ambos y el movimiento sus peones hacia el centro.
+-1.e4 e5 2.Cf3 Cc6 3.Cc3 Cf6. Con estos movimientos se da la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica).
+-1.e4 e5 2.Cf3 Cc6 3.Cc3 Cf6. Con estos movimientos se da la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica).
+-1.e4 e5 2.Cf3 Cc6 3.Cc3 Cf6. Con estos movimientos se da la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica).
+-1.e4 e5 2.Cf3 Cc6 3.Cc3 Cf6. Con estos movimientos se da la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica).
+-1.e4 e5 2.Cf3 Cc6 3.Cc3 Cf6. Con estos movimientos se da la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica).
+-1.e4 e5 2.Cf3 Cc6 3.Cc3 Cf6. Con estos movimientos se da la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica). A partir de aqui las blancas tienen dos variantes interesantes, la variante española 4.Ab5 y la variante escocesa 4.d4
+-La variante escocesa 4. d5, avanza el peon blanco a la casilla d4, desestabilizando el centro y generando un juego activo.
+-La variante española 4.Ab5, se desarrolla el alfil blanco por b5 con el objetivo de enrocar. Las piezas negras pueden mantener la simetría jugando Ab4 y aun en las siguientes jugadas con el enroque de ambos y el movimiento sus peones hacia el centro.
+---------------FIN DE LA LECCION---------------
+
+

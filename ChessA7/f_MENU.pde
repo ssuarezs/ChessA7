@@ -67,7 +67,7 @@ class menu extends WINDOW{
       PImage N=loadImage("piezas/neow/wn.png");
       PImage R=loadImage("piezas/neow/br.png");
       PImage P1=loadImage("piezas/neow/wp.png");
-      PImage L=loadImage("piezas/a.jpg");
+      PImage L=loadImage("piezas/a.png");
       fill(40); rect(630,10,470,70,8);
       image(K,990,6,height/9,height/9);
       image(P,1020,14,height/9,height/9);

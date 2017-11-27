@@ -32,7 +32,7 @@ Defensa de los dos caballos
 -En caso de que el blanco cambiara los alfiles, se retomaria con el peon de f.
 -En caso de que el blanco cambiara los alfiles, se retomaria con el peon de f. Y ahora las negras tendiran un comodo juego, donde su nuevo peon en e6 controla casillas importantes como d5 o f5, y su caballo de f6 podra tomar una provechosa excurcion hacia la casilla f4(via h5-f4).
 -Por ello seria mejor buscar el desarrollo por parte de las blancas. 
--Parea las negras, cambiar el alfil ahora mismo tampoco seria un buen negocio, debido a que se pued tomar retomar conn el peon de a y la torre tendria una excelente columna.
+-Para las negras, cambiar el alfil ahora mismo tampoco seria un buen negocio, debido a que se pueden tomar conn el peon de "a" y la torre tendria una excelente columna.
 -Con la Dama en d7, las negras terminan su desarrollo y podran buscar la ruptura del centro jugando d5 y seguido centralizaran sus torres poniendolas en las casillas d8 y e8. Asi tendran un juego muy activo y mucho potencial.
 -Las blancas no tienen porque apresurarse, tienen el tiempo para desarrollar todas sus piezas y pasar al ataque en el flanco de rey. Aun asi, tendran que ser cuidadosas con la ruptura en d5.  
 ---------------FIN DE LA LECCION---------------

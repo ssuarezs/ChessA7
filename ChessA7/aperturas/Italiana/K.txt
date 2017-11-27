@@ -1,4 +1,18 @@
 Apertura de los cuatro caballos
--Con estos movimientos tenemos preparada la apertura de los cuatro caballos, permite el desarrollo de las piezas hacia el centro del tablero y desarrolla los caballos primero que los alfiles (es una apertura simétrica).
--Se desarrolla el alfil blanco por B5 con el objetivo de enrocar.
--Las piezas negras pueden mantener la simetría jugando B4 y aun en las siguientes jugadas con el enroque de ambos y el movimiento sus peones hacia el centro.
+-1.e4 e5 2.Cf3 Cc6 3.Ac4 Ac5, son las jugadas que dan lugar a la apertura italiana.
+-1.e4 e5 2.Cf3 Cc6 3.Ac4 Ac5, son las jugadas que dan lugar a la apertura italiana.
+-1.e4 e5 2.Cf3 Cc6 3.Ac4 Ac5, son las jugadas que dan lugar a la apertura italiana.
+-1.e4 e5 2.Cf3 Cc6 3.Ac4 Ac5, son las jugadas que dan lugar a la apertura italiana.
+-1.e4 e5 2.Cf3 Cc6 3.Ac4 Ac5, son las jugadas que dan lugar a la apertura italiana.
+-1.e4 e5 2.Cf3 Cc6 3.Ac4 Ac5, son las jugadas que dan lugar a la apertura italiana. 4..Ac5 es la jugada que ejerce más control sobre el centro y que más dificulta la jugada D4 de las blancas.
+-Una opcion bastante interesante para las blancas en el gambito Evans, que se da tras 5.0-0 d5 6.b5
+-Una opcion bastante interesante para las blancas en el gambito Evans, que se da tras 5.0-0 d5 6.b5
+-Una opcion bastante interesante para las blancas en el gambito Evans, que se da tras 5.0-0 d5 6.b5. La idea detras del movimiento b4 es sacrificar a un peon para asegurar un centro fuerte, desarrollarse muy rapido, presionar sobre el punto débil f7 y en la medida de lo posible mantener al rey negro en el centro.
+---------------FIN DE LA LECCION--------------- 
+
+
+
+
+
+
+

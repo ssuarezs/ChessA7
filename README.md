@@ -51,5 +51,5 @@ El programa es desarrollado en el lenguaje **processing**, y para el desarrollo 
 - Objetos en programación.
 - Polimorfismo y Herencia.
 - Conocimiento sobre el uso de las librerías:
-  - [SoundFile](https://processing.org/reference/libraries/sound/SoundFile.html)
+  - ControlP5
   - [Ani](http://benedikt-gross.de/libraries/Ani/)
